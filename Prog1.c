@@ -1,23 +1,24 @@
-//1.Program to divide two numbers
+//1.Accept one number from user and print that number of * on screen.
 #include<stdio.h>
-	int Divide(int iNo1,int iNo2)
+
+void Accept(int iNo)
+{
+	int iCnt=0;
+	for(iCnt=0;iCnt<iNo;iCnt++)
 	{
-		int iAns = 0;
-		if(iNo2==0)
-		{
-			return -1;
-		}	
-		iAns= iNo1/iNo2;
-		return iAns;
+		printf("*");
 	}
-	
+}
+
+
 int main()
-	{
-		int iValue1 = 25, iValue2 = 0;
-		int iRet = 0;
-		
-		iRet =Divide(25,0);
-		printf("Division is %d\n",iRet);
-		
-		return 0;
-	}
+{
+	int iValue=0;
+	
+	printf("Enter the Number:");
+	scanf("%d",&iValue);
+	
+	Accept(iValue);
+	
+	return 0;
+}
