@@ -1,38 +1,27 @@
-//4. Accept one number and check whether is is divisible by 5 or not.
-
+//4. Accept two numbers from user and display first number in second number of times.
 #include<stdio.h>
-typedef int BOOL;
-#define TRUE 1
-#define FALSE 0
 
-	int Check( int iNo)
+int Display(int iNo1, int iNo2)
+{
+	int iCnt=0;
+	for(iCnt=1;iCnt<=iNo2;iCnt++)
 	{
-	if((iNo%5) == 0)
-	{
-		return TRUE;
-	}
-	else
-	{
-		return FALSE;
+		printf("%d",iNo1);
 	}
 }
 
+
 int main()
 {
-	int iValue = 0;
-	BOOL bRet = FALSE;
-	printf("Enter number\n");
-	scanf("%d",&iValue);
+	int iValue1=0,iValue2=0;
 	
-	bRet = Check(iValue);
+	printf("Enter the 1st Number:\n");
+	scanf("%d",&iValue1);
 	
-	if(bRet == TRUE)
-	{
-		printf("Divisible by 5\n");
-	}
-	else
-	{
-		printf("Number is Not Divisible by 5");
-	}
+	printf("Enter the 2nd Number:\n");
+	scanf("%d",&iValue2);
+	
+	Display(iValue1,iValue2);
+	
 	return 0;
 }

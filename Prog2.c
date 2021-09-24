@@ -1,17 +1,24 @@
-//2. Program to print 5 times “Marvellous” on screen.
+//2.Accept one number from user and print that number of * on screen.
 #include<stdio.h>
 
-	void Display()
+void Display(int iNo)
+{
+	while(iNo>0)
 	{
-		int i = 0;
-		for(i = 1; i<=5 ;i++)
-		{
-			printf("Marvellous Infosystem\n");
-		}
+		printf("*");
+		iNo--;
 	}
-	
+}
+
+
 int main()
-	{
-		Display();
-		return 0;
-	}
+{
+	int iValue=0;
+	
+	printf("Enter the Number:");
+	scanf("%d",&iValue);
+	
+	Display(iValue);
+	
+	return 0;
+}

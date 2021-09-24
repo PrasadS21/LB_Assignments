@@ -1,22 +1,32 @@
-//5. Accept one number from user and print that number of * on screen.
-
+//5. Accept number from user and check whether number is even or odd..
 #include<stdio.h>
+#define TRUE 1
+#define FALSE 0
+typedef int BOOL;
 
-	void Accept(int iNo)
+
+	BOOL ChkEven(int iNo1)
 	{
-		int iCnt = 0;
-		for(iCnt=0;iCnt<=iNo;iCnt++)
+		if((iNo1%2)==0)
 		{
-			printf("*");
+			printf("Number is Even");
+		}
+		else
+		{
+			printf("Number is Odd");
 		}
 	}
+
+
 int main()
 {
 	int iValue = 0;
-	iValue = 5;
 	
-	Accept(iValue);
-		
+	BOOL bRet = FALSE;
+	printf("Enter number:\n");
+	scanf("%d",&iValue);
+
+	bRet = ChkEven(iValue);
+
 	return 0;
 }
-
